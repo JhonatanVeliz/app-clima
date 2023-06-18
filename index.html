@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App del Clima</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- Js -->
+    <script defer src="./js/main-api.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="loader">
+        <div class="loader-animation">
+            <img src="./img/icon.png" alt="icono">
+        </div>
+    </div>
+
+    <main class="container">
+
+        <h1 class="title">El Clima de hoy <span id="day"></span></h1>
+
+        <article class="layout-container">
+
+            <div class="clima">
+
+                <div class="clima__img">
+                    <img src="#" alt="imagen del clima" id="img">
+                </div>
+
+                <div class="clima__datos">
+                    <h2 class="clima__title">Datos:</h2>
+                    <ul class="clima__listado">
+                        <li class="clima__li">Temperatura: <span class="clima__span" id="temp"></span></li>
+                        <li class="clima__li">Calidez: <span class="clima__span" id="calidez"></span></li>
+                        <li class="clima__li">Humedad: <span class="clima__span" id="humedad"></span></li>
+                        <li class="clima__li">Presión: <span class="clima__span" id="presion"></span></li>
+                    </ul>
+                </div>
+
+                <div class="clima__fecha">
+                    <p class="fecha"></p>
+                    <p class="reloj"></p>
+                </div>
+            </div>
+
+        </article>
+
+    </main>
+
+    <div class="catch">
+        <h3 class="catch__title">Nos disculpamos por los inconvenientes ocasionados y estamos trabajando para resolverlo lo antes posible.</h3>
+        <p class="catch__text">Si deseas puedes regresar a probarlo en unos instantes</p>
+
+        <a href="https://www.google.com/" class="catch__link">Ir a Google</a>
+    </div>
+
+    <div class="warning catch">
+        <h4 class="warning__text">Porfavor vuelve a cargar la página y permite acceder a la ubicación para poder cargar los datos</h4>
+    </div>
+
+</body>
+</html>

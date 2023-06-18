@@ -1,0 +1,203 @@
+:root{
+    --font: 'Poppins';
+}
+
+.light{
+    background-image: radial-gradient(circle at 50% -20.71%, #4caad6 0, #57b4e7 25%, #229ad6 50%, #009ce9 75%, #0085e0 100%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.nublado{
+    background: linear-gradient(167.44deg, #08244F 0%, #134CB5 47.38%, #0B42AB 100%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    padding: 3rem;
+}
+.title{
+    text-align: center;
+    font-family: var(--font);
+    font-size: 4rem;
+    font-weight: 500;
+    color: #e3e0e8;
+    text-shadow: 0 1px 0 #ccc, 
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+.layout-container{
+    width: 100%;
+    min-height: 70vh;
+    margin: 5rem auto 1rem auto;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.clima{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+.clima__datos{
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+.clima__title{
+    font-family: var(--font);
+    color: #e3e0e8;
+    text-shadow: 0 1px 0 #ccc, 
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+    text-align: center;
+}
+.clima__listado{
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+.clima__li{
+    font-family: var(--font);
+    color: #e3e0e8;
+    text-shadow: 0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 10px 20px rgba(0,0,0,.15);
+    font-size: 2rem;
+    list-style: none;
+    line-height: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.clima__img{
+    max-width: 20rem;
+}
+.clima__fecha{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-color: #ededed37;
+    border-radius: 1rem;
+    box-shadow: 0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 10px 20px rgba(0,0,0,.15);
+    backdrop-filter: blur(10rem);
+}
+.fecha{
+    font-size: 3rem;
+    font-family: var(--font);
+    color: #e3e0e8;
+    text-shadow: 0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 10px 20px rgba(0,0,0,.15);
+}
+.reloj{
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: var(--font);
+    color: #e3e0e8;
+    text-shadow: 0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 10px 20px rgba(0,0,0,.15);
+}
+.loader{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #020116;
+    transition: .3s linear;
+}
+.loader-animation{
+    max-width: 50rem;
+    z-index: 10;
+    animation: aparecer 1s alternate infinite;
+}
+@keyframes aparecer {
+    from{
+        opacity: 0;        
+    }
+    to{
+        opacity: 1;
+    }
+}
+.catch{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #020116;
+    font-family: var(--font);
+    color: #ccc;
+    z-index: -1;
+    opacity: 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+.catch__title{
+    font-size: 2.8rem;
+    font-style: italic;
+}
+.catch__text{
+    padding-top: 2rem;
+    font-size: 1.8rem;
+}
+.catch__link{
+    margin: 2rem auto 0 auto;
+    width: 20rem;
+    padding: 1.5rem;
+    background-color: rgb(159, 10, 10);
+    border-radius: .5rem;
+    color: #ccc;
+}
+.catch--active{
+    z-index: 20;
+    opacity: 1;
+}
+.warning--active{
+    z-index: 30;
+    opacity: 1;
+    font-size: 4rem;
+}
+@media screen and (max-width:780px) {
+    .clima{
+        width: 80%;
+    }
+    .clima__img{
+        margin: auto;
+    }
+    .clima__datos{
+        width: 100%;
+        margin: 0;
+        margin: 2rem 0;
+    }
+    .clima__listado{
+        margin-left: 0;
+    }
+    .clima__fecha{
+        padding: 1.5rem;
+    }
+}
